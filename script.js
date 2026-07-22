@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // --- Dynamic Typing Effect in Hero ---
+  // --- Dynamic Typing Effect ---
   const typingElement = document.getElementById("typing-text");
   const phrases = [
     "Computer Science Engineer 💻",
     "STEM Olympiad Winner 🏆",
     "Football & Badminton Tactics Buff ⚽",
     "The Mentalist & Logic Enthusiast ☕",
-    "Duolingo Polyglot (600+ Day Streak) 🇪🇸🇩🇪🇬🇷"
+    "Polyglot-Language Learner 🌐"
   ];
 
   let phraseIndex = 0;
@@ -52,33 +52,38 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === futModal) futModal.classList.remove("active");
   });
 
-  // --- Football Goal Kick & Commentary Game ---
+  // --- Football Goal Kick Animation into Net ---
   const kickBall = document.getElementById("kickBall");
   const goalsCount = document.getElementById("goalsCount");
   const kickCommentary = document.getElementById("kickCommentary");
   let score = 0;
+  let isKicking = false;
 
   const commentaryList = [
-    "🚀 GOLAZO! Absolute missile into top bins!",
-    "⚽ Beautiful curl around the defender!",
-    "🔥 Screamer from 30 yards out!",
-    "🎩 Hat-trick complete! What a stroke!",
-    "🎯 Precision penalty right into side netting!",
-    "⚡ Unstoppable volley! The keeper didn't move!",
-    "👟 Bicycle kick stunner!"
+    "🚀 GOLAZO! Hits the top corner net!",
+    "⚽ Beautiful curler past the keeper!",
+    "🔥 Screamer into the top bin!",
+    "🎩 Terrific half volley! Perfect strike!",
+    "🎯 Side netting penalty goal!",
+    "⚡ Unstoppable volley into the goal!"
   ];
 
   function triggerGoalAnimation() {
+    if (isKicking) return;
+    isKicking = true;
+    
     score++;
     goalsCount.textContent = score;
 
+    kickBall.classList.add("kicked-to-goal");
+    
     const randomCommentary = commentaryList[Math.floor(Math.random() * commentaryList.length)];
     kickCommentary.textContent = randomCommentary;
 
-    kickBall.style.transform = "translateY(-30px) rotate(360deg) scale(1.2)";
     setTimeout(() => {
-      kickBall.style.transform = "translateY(0) rotate(0deg) scale(1)";
-    }, 300);
+      kickBall.classList.remove("kicked-to-goal");
+      isKicking = false;
+    }, 600);
   }
 
   kickBall.addEventListener("click", triggerGoalAnimation);
@@ -98,11 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     '"Control your emotions, or they will control you."',
     '"Truth is in the eye of the observer."',
     '"Tea is the key to clear thinking when solving a tough dilemma."',
-    '"Nostalgia is the denial of a painful present."',
     '"The secret to a good trick is keeping it simple."',
-    '"When you know what a man wants, you know who he is."',
-    '"Observation is not just seeing; it is understanding causality."',
-    '"People like to talk about themselves. You just have to listen."',
     '"A calm mind sees moves three steps ahead."'
   ];
 
@@ -121,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   brewQuoteBtn.addEventListener("click", getNewQuote);
 
-  // Floating Tea Cup Prop Interaction
   const floatingTea = document.getElementById("floatingTea");
   const teaToast = document.getElementById("teaToast");
 
@@ -138,9 +138,86 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("vibe").scrollIntoView({ behavior: 'smooth' });
   });
 
-  // --- Tactical Chess Solution Toggle ---
-  const solveChessBtn = document.getElementById("solveChessBtn");
+  // --- Multiple Chess Puzzles Logic ---
+  const puzzles = [
+    {
+      title: "Puzzle 1: Smothered Mate",
+      prompt: "White to Move: Mate in 2!",
+      board: [
+        ['♖', '.', '.', '♔'],
+        ['.', '♟', '♟', '♟'],
+        ['.', '♕', '.', '.'],
+        ['.', '.', '.', '♚']
+      ],
+      solution: "💥 1. Qf7+ Kh8  2. Qg7# (Smothered Checkmate!)"
+    },
+    {
+      title: "Puzzle 2: Queen Sacrifice",
+      prompt: "White to Move: Mate in 2!",
+      board: [
+        ['.', '.', '♖', '♔'],
+        ['♟', '♟', '.', '♟'],
+        ['.', '.', '♕', '.'],
+        ['.', '.', '♗', '♚']
+      ],
+      solution: "💥 1. Qh7+!! Kxh7  2. Rh3# (Rook & Bishop Mate!)"
+    },
+    {
+      title: "Puzzle 3: Back-Rank Mate",
+      prompt: "White to Move: Mate in 1!",
+      board: [
+        ['.', '.', '.', '♔'],
+        ['♟', '♟', '♟', '.'],
+        ['.', '.', '.', '.'],
+        ['♖', '.', '.', '♚']
+      ],
+      solution: "💥 1. Ra8# (Classic Back-Rank Checkmate!)"
+    }
+  ];
+
+  let currentPuzzleIndex = 0;
+  const puzzleTitle = document.getElementById("puzzleTitle");
+  const chessPrompt = document.getElementById("chessPrompt");
+  const chessBoardContainer = document.getElementById("chessBoardContainer");
   const chessSolution = document.getElementById("chessSolution");
+  const solveChessBtn = document.getElementById("solveChessBtn");
+  const prevPuzzleBtn = document.getElementById("prevPuzzleBtn");
+  const nextPuzzleBtn = document.getElementById("nextPuzzleBtn");
+
+  function renderPuzzle(index) {
+    const p = puzzles[index];
+    puzzleTitle.textContent = p.title;
+    chessPrompt.innerHTML = `<strong>White to Move:</strong> ${p.prompt}`;
+    chessSolution.innerHTML = p.solution;
+    chessSolution.classList.add("hidden");
+    solveChessBtn.textContent = "Show Solution";
+
+    chessBoardContainer.innerHTML = "";
+    p.board.forEach((row, rIdx) => {
+      const rowDiv = document.createElement("div");
+      rowDiv.className = "chess-row";
+      row.forEach((cell, cIdx) => {
+        const sq = document.createElement("div");
+        const isWhiteSq = (rIdx + cIdx) % 2 === 0;
+        sq.className = `sq ${isWhiteSq ? "white" : "black"}`;
+        sq.textContent = cell;
+        rowDiv.appendChild(sq);
+      });
+      chessBoardContainer.appendChild(rowDiv);
+    });
+  }
+
+  renderPuzzle(currentPuzzleIndex);
+
+  prevPuzzleBtn.addEventListener("click", () => {
+    currentPuzzleIndex = (currentPuzzleIndex - 1 + puzzles.length) % puzzles.length;
+    renderPuzzle(currentPuzzleIndex);
+  });
+
+  nextPuzzleBtn.addEventListener("click", () => {
+    currentPuzzleIndex = (currentPuzzleIndex + 1) % puzzles.length;
+    renderPuzzle(currentPuzzleIndex);
+  });
 
   solveChessBtn.addEventListener("click", () => {
     chessSolution.classList.toggle("hidden");
