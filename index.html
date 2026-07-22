@@ -14,44 +14,59 @@
 </head>
 <body>
 
-  <div class="floating-prop football-prop" id="floatingFootball" title="Click to bounce the ball!">
+  <div class="bg-math-floating" aria-hidden="true">
+    <span class="math-item m1">∫ f(x)dx</span>
+    <span class="math-item m2">∑ (1/n²) = π²/6</span>
+    <span class="math-item m3">e<sup>iπ</sup> + 1 = 0</span>
+    <span class="math-item m4">∇ × E = -∂B/∂t</span>
+    <span class="math-item m5">∞</span>
+    <span class="math-item m6">√x</span>
+    <span class="math-item m7">∬ D dx dy</span>
+    <span class="math-item m8">lim_{x→0} (sin x / x) = 1</span>
+  </div>
+
+  <div class="floating-prop football-prop" id="floatingFootball" title="Click to score a goal!">
     <i class="fa-solid fa-futbol"></i>
   </div>
-  <div class="floating-prop teacup-prop" id="floatingTea" title="Patrick Jane's Tea Cup">
+  
+  <div class="floating-prop teacup-prop" id="floatingTea" title="Click to brew Patrick Jane's wisdom!">
     <i class="fa-solid fa-mug-hot"></i>
     <span class="steam steam-1"></span>
     <span class="steam steam-2"></span>
+    <span class="tea-badge-toast" id="teaToast">Sip Tea ☕</span>
   </div>
 
   <nav class="navbar">
     <div class="logo">Srijit Banerjee</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#cinema">Cinema & TV</a></li>
+      <li><a href="#socials">Socials</a></li>
+      <li><a href="#cinema">Cinema</a></li>
+      <li><a href="#tv">TV Series</a></li>
       <li><a href="#gaming">Gaming</a></li>
       <li><a href="#duolingo">Duolingo</a></li>
-      <li><a href="#credentials">Certificates</a></li>
+      <li><a href="#credentials">Credentials</a></li>
       <li><a href="#vibe">Vibe Corner</a></li>
-      <li><a href="#socials">Connect</a></li>
     </ul>
   </nav>
 
   <header class="hero" id="about">
+    <div class="hero-glow-ring"></div>
     <div class="hero-container">
       <div class="hero-badge">
-        <i class="fa-solid fa-clapperboard"></i> Cinematic Space
+        <i class="fa-solid fa-atom"></i> CS Engineer & STEM Researcher
       </div>
       <h1>Srijit Banerjee</h1>
       <p class="subtitle"><span id="typing-text"></span></p>
       <p class="bio">
-        Engineering student with a deep passion for computer science, mathematics, and tactical sports. STEM Olympiad qualifier, quadcopter builder, and creator of <i>Life and Conundrums</i>. When offline, I analyze football strategies or dissect complex film plots.
+        Engineering student with a deep passion for computer science, mathematics, and tactical sports. STEM Olympiad qualifier, drone engineer, and creator of <i>Life and Conundrums</i>.
       </p>
       <div class="hero-actions">
         <button class="btn primary-btn" id="openFutBtn">
           <i class="fa-solid fa-id-card"></i> View FUT Manager Card
         </button>
         <a href="#cinema" class="btn secondary-btn">
-          <i class="fa-solid fa-film"></i> Favorite Cinema
+          <i class="fa-solid fa-film"></i> Cinema & Shows
         </a>
       </div>
     </div>
@@ -93,52 +108,59 @@
     </div>
   </div>
 
-  <section class="section" id="socials">
-    <h2 class="section-title"><i class="fa-solid fa-compass"></i> Network & Platforms</h2>
+  <section class="section section-socials" id="socials">
+    <h2 class="section-title"><i class="fa-solid fa-compass"></i> Digital Footprint</h2>
     <div class="social-grid">
-      <a href="https://linkedin.com" target="_blank" class="social-card linkedin">
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-card linkedin glow-ring-blue">
         <i class="fa-brands fa-linkedin"></i>
         <div class="social-info">
           <h3>LinkedIn</h3>
-          <p>Professional Profile</p>
+          <p>Professional Network</p>
         </div>
       </a>
-      <a href="https://github.com" target="_blank" class="social-card github">
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-card github glow-ring-dark">
         <i class="fa-brands fa-github"></i>
         <div class="social-info">
           <h3>GitHub</h3>
-          <p>Code Repositories</p>
+          <p>Projects & Code</p>
         </div>
       </a>
-      <a href="https://stardance.nasa.gov" target="_blank" class="social-card stardance">
+      <a href="https://stardance.nasa.gov" target="_blank" rel="noopener noreferrer" class="social-card stardance glow-ring-red">
         <i class="fa-solid fa-user-astronaut"></i>
         <div class="social-info">
-          <h3>StarDance by NASA</h3>
-          <p>Space & Science Hub</p>
+          <h3>StarDance NASA</h3>
+          <p>Space Science Hub</p>
         </div>
       </a>
-      <a href="https://instagram.com" target="_blank" class="social-card instagram">
+      <a href="https://duolingo.com" target="_blank" rel="noopener noreferrer" class="social-card duo-social glow-ring-green">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Duolingo_logo_%282019%29.svg" alt="Duolingo Logo" class="duo-widget-icon" />
+        <div class="social-info">
+          <h3>Duolingo Profile</h3>
+          <p>600+ Day Streak</p>
+        </div>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-card instagram glow-ring-pink">
         <i class="fa-brands fa-instagram"></i>
         <div class="social-info">
           <h3>Instagram</h3>
-          <p>Life & Moments</p>
+          <p>Life & Snaps</p>
         </div>
       </a>
-      <a href="https://discord.com" target="_blank" class="social-card discord">
+      <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-card discord glow-ring-purple">
         <i class="fa-brands fa-discord"></i>
         <div class="social-info">
           <h3>Discord</h3>
           <p>Community & Tech</p>
         </div>
       </a>
-      <a href="https://pinterest.com" target="_blank" class="social-card pinterest">
+      <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-card pinterest glow-ring-red">
         <i class="fa-brands fa-pinterest"></i>
         <div class="social-info">
           <h3>Pinterest</h3>
-          <p>Visual Inspiration</p>
+          <p>Visual Moodboards</p>
         </div>
       </a>
-      <a href="#blog" class="social-card blog">
+      <a href="#vibe" class="social-card blog glow-ring-gold">
         <i class="fa-solid fa-square-root-variable"></i>
         <div class="social-info">
           <h3>Life and Conundrums</h3>
@@ -148,254 +170,271 @@
     </div>
   </section>
 
-  <section class="section" id="cinema">
+  <section class="section section-cinema" id="cinema">
     <h2 class="section-title"><i class="fa-solid fa-film"></i> Favorite Movies (Ranked)</h2>
-    <p class="section-subtitle">Top cinematic masterworks ranked in order. Icons & covers scaled for top 3.</p>
+    <p class="section-subtitle">Click posters to open their official IMDb pages.</p>
     
     <div class="media-rank-grid">
-      
-      <div class="media-card rank-1 top-three">
+      <a href="https://www.imdb.com/title/tt0468569/" target="_blank" rel="noopener noreferrer" class="media-card rank-1 top-three glow-ring-gold">
         <div class="medal-badge medal-gold">🥇 #1</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/6188983916570644667_0" alt="The Dark Knight" />
+          <img src="https://m.media-amazon.com/images/M/MVBMTMxNTQyNTg0Ml5BMl5BanBnXkFtZTcwMjA4MjkwMQ@@._V1_FMjpg_UX1000_.jpg" alt="The Dark Knight IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>The Dark Knight</h3>
-          <span class="genre">Psychological Thriller / Action</span>
+          <span class="genre">Psychological Thriller / IMDb 9.0</span>
         </div>
-      </div>
+      </a>
 
-      <div class="media-card rank-2 top-three">
+      <a href="https://www.imdb.com/title/tt0118971/" target="_blank" rel="noopener noreferrer" class="media-card rank-2 top-three glow-ring-silver">
         <div class="medal-badge medal-silver">🥈 #2</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/421779885090399242_0" alt="The Devil's Advocate" />
+          <img src="https://m.media-amazon.com/images/M/MVBMTkxMjI3NDIxNF5BMl5BanBnXkFtZTgwMTkzMzcxMDE@._V1_FMjpg_UX1000_.jpg" alt="The Devil's Advocate IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>The Devil's Advocate</h3>
-          <span class="genre">Mystery / Supernatural</span>
+          <span class="genre">Mystery Thriller / IMDb 7.5</span>
         </div>
-      </div>
+      </a>
 
-      <div class="media-card rank-3 top-three">
+      <a href="https://www.imdb.com/title/tt0071562/" target="_blank" rel="noopener noreferrer" class="media-card rank-3 top-three glow-ring-bronze">
         <div class="medal-badge medal-bronze">🥉 #3</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/17276164572813655187_0" alt="The Godfather II" />
+          <img src="https://m.media-amazon.com/images/M/MVBMWMwMGVkM2YtM2I5Ny00NWVjLWI2OWUtM2E2MDI1ZmU1NWNmXkFtZTgwODI1MjkzNTM@._V1_FMjpg_UX1000_.jpg" alt="The Godfather Part II IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>The Godfather Part II</h3>
-          <span class="genre">Crime / Drama Classic</span>
+          <span class="genre">Crime Drama / IMDb 9.0</span>
         </div>
-      </div>
+      </a>
 
-      <div class="media-card rank-4">
+      <a href="https://www.imdb.com/title/tt0268978/" target="_blank" rel="noopener noreferrer" class="media-card rank-4 glow-ring-blue">
         <div class="medal-badge medal-standard">#4</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/7632219868233047955_0" alt="A Beautiful Mind" />
+          <img src="https://m.media-amazon.com/images/M/MVBMTIxNTQ1MTA1OV5BMl5BanBnXkFtZTcwNzA3NGM0MQ@@._V1_FMjpg_UX1000_.jpg" alt="A Beautiful Mind IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>A Beautiful Mind</h3>
-          <span class="genre">Biographical Drama / Math</span>
+          <span class="genre">Biographical Math / IMDb 8.2</span>
         </div>
-      </div>
+      </a>
 
-      <div class="media-card rank-5">
+      <a href="https://www.imdb.com/title/tt1375666/" target="_blank" rel="noopener noreferrer" class="media-card rank-5 glow-ring-purple">
         <div class="medal-badge medal-standard">#5</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/5903288414437667929_0" alt="Inception" />
+          <img src="https://m.media-amazon.com/images/M/MVBMjAxMzUyMTIzNV5BMl5BanBnXkFtZTcwMzg1NjM1Mw@@._V1_FMjpg_UX1000_.jpg" alt="Inception IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>Inception</h3>
-          <span class="genre">Sci-Fi / Mind-Bender</span>
+          <span class="genre">Sci-Fi Mindbender / IMDb 8.8</span>
         </div>
-      </div>
-
+      </a>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-tv" id="tv">
     <h2 class="section-title"><i class="fa-solid fa-tv"></i> Favorite Web Series (Ranked in Order)</h2>
-    <p class="section-subtitle">Top television masterpieces ordered by personal obsession.</p>
+    <p class="section-subtitle">Click posters to open their official IMDb pages.</p>
     
     <div class="media-rank-grid">
-      
-      <div class="media-card rank-1 top-three">
+      <a href="https://www.imdb.com/title/tt1196946/" target="_blank" rel="noopener noreferrer" class="media-card rank-1 top-three glow-ring-gold">
         <div class="medal-badge medal-gold">🥇 #1</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/16429863304335395595_0" alt="The Mentalist" />
+          <img src="https://m.media-amazon.com/images/M/MVBMTI1MTMwNjg4NV5BMl5BanBnXkFtZTcwMDM4NDEzMg@@._V1_FMjpg_UX1000_.jpg" alt="The Mentalist IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>The Mentalist</h3>
-          <span class="genre">Patrick Jane / Crime Mystery</span>
+          <span class="genre">Patrick Jane / IMDb 8.2</span>
         </div>
-      </div>
+      </a>
 
-      <div class="media-card rank-2 top-three">
+      <a href="https://www.imdb.com/title/tt2402101/" target="_blank" rel="noopener noreferrer" class="media-card rank-2 top-three glow-ring-silver">
         <div class="medal-badge medal-silver">🥈 #2</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/87392571780567239_0" alt="Peaky Blinders" />
+          <img src="https://m.media-amazon.com/images/M/MVBMjA3NTE2OTcxNV5BMl5BanBnXkFtZTgwNzUxNDI2MDE@._V1_FMjpg_UX1000_.jpg" alt="Peaky Blinders IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>Peaky Blinders</h3>
-          <span class="genre">Historical Crime / Strategy</span>
+          <span class="genre">Crime Strategy / IMDb 8.8</span>
         </div>
-      </div>
+      </a>
 
-      <div class="media-card rank-3 top-three">
+      <a href="https://www.imdb.com/title/tt1632701/" target="_blank" rel="noopener noreferrer" class="media-card rank-3 top-three glow-ring-bronze">
         <div class="medal-badge medal-bronze">🥉 #3</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/1793092578874478953_0" alt="Suits" />
+          <img src="https://m.media-amazon.com/images/M/MVBNjg1MDcwMTctMzk4NC00OGI4LWE2ZDUtMTM3Y2I2NWVjMGIyXkFtZTgwNTM5OTM0MDE@._V1_FMjpg_UX1000_.jpg" alt="Suits IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>Suits</h3>
-          <span class="genre">Legal Drama / High Intellect</span>
+          <span class="genre">Legal Intellect / IMDb 8.4</span>
         </div>
-      </div>
+      </a>
 
-      <div class="media-card rank-4">
+      <a href="https://www.imdb.com/title/tt0773262/" target="_blank" rel="noopener noreferrer" class="media-card rank-4 glow-ring-red">
         <div class="medal-badge medal-standard">#4</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/11546586552630907784_0" alt="Dexter" />
+          <img src="https://m.media-amazon.com/images/M/MVBMTkzMzA1NzcxNV5BMl5BanBnXkFtZTgwNTI2OTE2MDE@._V1_FMjpg_UX1000_.jpg" alt="Dexter IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>Dexter</h3>
-          <span class="genre">Psychological Crime Thriller</span>
+          <span class="genre">Crime Thriller / IMDb 8.7</span>
         </div>
-      </div>
+      </a>
 
-      <div class="media-card rank-5">
+      <a href="https://www.imdb.com/title/tt3032476/" target="_blank" rel="noopener noreferrer" class="media-card rank-5 glow-ring-purple">
         <div class="medal-badge medal-standard">#5</div>
         <div class="media-cover">
-          <img src="http://googleusercontent.com/image_collection/image_retrieval/16663548961573866863_0" alt="Better Call Saul" />
+          <img src="https://m.media-amazon.com/images/M/MVBMjA2MzEwNTI3NV5BMl5BanBnXkFtZTgwOTU3NDI2MDE@._V1_FMjpg_UX1000_.jpg" alt="Better Call Saul IMDb Poster" />
         </div>
         <div class="media-details">
           <h3>Better Call Saul</h3>
-          <span class="genre">Legal Drama / Masterpiece</span>
+          <span class="genre">Drama Masterpiece / IMDb 9.0</span>
         </div>
-      </div>
-
+      </a>
     </div>
   </section>
 
-  <section class="section" id="gaming">
+  <section class="section section-gaming" id="gaming">
     <h2 class="section-title"><i class="fa-solid fa-gamepad"></i> Gaming Arena</h2>
     <p class="section-subtitle">Tactical simulation, sports engineering, and strategy games I play.</p>
     
     <div class="games-grid">
-      <div class="game-card">
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/18268862237961339587_0" alt="EA FC" />
+      <a href="https://www.ea.com/games/ea-sports-fc/fc-24" target="_blank" rel="noopener noreferrer" class="game-card glow-ring-green">
+        <img src="https://m.media-amazon.com/images/M/MVBNzk1NTk1MGEtN2Y0ZS00MDJjLWI4NTktMDNiNzRmZjE2MzY5XkFtZTgwOTcyMDk4OTE@._V1_FMjpg_UX1000_.jpg" alt="EA Sports FC 24 Cover" />
         <div class="game-overlay">
           <h3>EA Sports FC</h3>
           <p>Ultimate Football Tactics</p>
         </div>
-      </div>
-      <div class="game-card">
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/4719857506306299421_0" alt="eFootball" />
+      </a>
+      <a href="https://www.konami.com/efootball/" target="_blank" rel="noopener noreferrer" class="game-card glow-ring-blue">
+        <img src="https://m.media-amazon.com/images/M/MVBMTjcwYjU4ZDgtOTJhMy00MmRmLWJmOWUtNzE0NzA1OGI1MGMxXkFtZTgwNTcxNjg2OTE@._V1_FMjpg_UX1000_.jpg" alt="eFootball Official Cover" />
         <div class="game-overlay">
           <h3>eFootball</h3>
-          <p>Simulation & Precision Pitching</p>
+          <p>Precision Pitch Simulation</p>
         </div>
-      </div>
-      <div class="game-card">
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/16901180951334608498_0" alt="Among Us" />
+      </a>
+      <a href="https://innersloth.com/games/among-us/" target="_blank" rel="noopener noreferrer" class="game-card glow-ring-red">
+        <img src="https://m.media-amazon.com/images/M/MVBMTmQxNDExNzItNDYyOC00M2NkLTlhMDItYTAwNDIzMTAyYmUzXkFtZTgwOTkxNDM5ODE@._V1_FMjpg_UX1000_.jpg" alt="Among Us Official Cover" />
         <div class="game-overlay">
           <h3>Among Us</h3>
           <p>Social Deduction & Logic</p>
         </div>
-      </div>
-      <div class="game-card">
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/2087161734483443347_0" alt="Chess.com" />
+      </a>
+      <a href="https://www.chess.com" target="_blank" rel="noopener noreferrer" class="game-card glow-ring-gold">
+        <img src="https://m.media-amazon.com/images/M/MVBMTzE0NDI4NTMwMV5BMl5BanBnXkFtZTgwMDY4OTgwMzE@._V1_FMjpg_UX1000_.jpg" alt="Chess Official Art" />
         <div class="game-overlay">
           <h3>Chess.com</h3>
           <p>Blitz & Positional Strategy</p>
         </div>
-      </div>
-      <div class="game-card">
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/4574039669113563101_0" alt="GTA V" />
+      </a>
+      <a href="https://www.rockstargames.com/gta-v" target="_blank" rel="noopener noreferrer" class="game-card glow-ring-purple">
+        <img src="https://m.media-amazon.com/images/M/MVBMTNmNzI3NGMtN2Y5Yi00YzM0LWE2ZjgtNTJjMTA2Y2Y0YjkyXkFtZTgwMDUzMDc1MDE@._V1_FMjpg_UX1000_.jpg" alt="GTA V Official Cover" />
         <div class="game-overlay">
           <h3>GTA V</h3>
           <p>Open World Exploration</p>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 
-  <section class="section" id="duolingo">
-    <div class="duolingo-container">
+  <section class="section section-duo" id="duolingo">
+    <div class="duolingo-container glow-ring-green">
       <div class="duolingo-header">
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/16898440191420160225_0" alt="Duolingo Owl" class="duo-owl" />
+        <div class="duo-owl-avatar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Duolingo_logo_%282019%29.svg" alt="Official Duolingo Owl Logo" class="duo-owl-img" />
+        </div>
         <div>
-          <h2>Duolingo Language Vault</h2>
-          <p>Polyglot journey in progress! Tracking streak & language fluency.</p>
+          <h2>Duolingo Vault & Polyglot Stats</h2>
+          <p>Consistent daily language acquisition and polyglot development.</p>
         </div>
       </div>
 
       <div class="duo-stats-grid">
-        <div class="duo-stat-card">
-          <i class="fa-solid fa-fire duo-icon"></i>
+        <div class="duo-stat-card glow-ring-gold">
+          <i class="fa-solid fa-fire duo-icon-fire"></i>
           <div>
-            <h3>520+ Days</h3>
+            <h3>600+ Days</h3>
             <p>Active Streak</p>
           </div>
         </div>
-        <div class="duo-stat-card">
-          <i class="fa-solid fa-bolt duo-icon"></i>
+        <div class="duo-stat-card glow-ring-blue">
+          <i class="fa-solid fa-bolt duo-icon-bolt"></i>
           <div>
-            <h3>45,000+ XP</h3>
+            <h3>150,000+ XP</h3>
             <p>Total Experience</p>
           </div>
         </div>
-        <div class="duo-stat-card">
-          <i class="fa-solid fa-crown duo-icon"></i>
+        <div class="duo-stat-card glow-ring-gold">
+          <i class="fa-solid fa-trophy duo-icon-gold"></i>
+          <div>
+            <h3>30+ Top Finishes</h3>
+            <p>Podium Finishes</p>
+          </div>
+        </div>
+        <div class="duo-stat-card glow-ring-purple">
+          <i class="fa-solid fa-gem duo-icon-gem"></i>
           <div>
             <h3>Diamond League</h3>
-            <p>Top Tier Competitor</p>
+            <p>Top Tier Champion</p>
           </div>
         </div>
       </div>
 
       <div class="language-bars">
         <div class="lang-item">
-          <div class="lang-label"><span>🇪🇸 Spanish</span><strong>Advanced (B2)</strong></div>
-          <div class="progress-bg"><div class="progress-fill" style="width: 85%;"></div></div>
+          <div class="lang-label">
+            <span>🇪🇸 Spanish</span>
+            <strong>Professional Proficiency</strong>
+          </div>
+          <div class="progress-bg"><div class="progress-fill spanish-fill" style="width: 95%;"></div></div>
         </div>
         <div class="lang-item">
-          <div class="lang-label"><span>🇫🇷 French</span><strong>Intermediate (B1)</strong></div>
-          <div class="progress-bg"><div class="progress-fill" style="width: 65%;"></div></div>
+          <div class="lang-label">
+            <span>🇩🇪 German</span>
+            <strong>Intermediate Level</strong>
+          </div>
+          <div class="progress-bg"><div class="progress-fill german-fill" style="width: 70%;"></div></div>
         </div>
         <div class="lang-item">
-          <div class="lang-label"><span>🇩🇪 German</span><strong>Elementary (A2)</strong></div>
-          <div class="progress-bg"><div class="progress-fill" style="width: 45%;"></div></div>
+          <div class="lang-label">
+            <span>🇬🇷 Greek</span>
+            <strong>Intermediate Level</strong>
+          </div>
+          <div class="progress-bg"><div class="progress-fill greek-fill" style="width: 65%;"></div></div>
         </div>
         <div class="lang-item">
-          <div class="lang-label"><span>🇯🇵 Japanese</span><strong>Basics (A1)</strong></div>
-          <div class="progress-bg"><div class="progress-fill" style="width: 30%;"></div></div>
+          <div class="lang-label">
+            <span>🏛️ Latin</span>
+            <strong>Elementary Level</strong>
+          </div>
+          <div class="progress-bg"><div class="progress-fill latin-fill" style="width: 45%;"></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="credentials">
+  <section class="section section-credentials" id="credentials">
     <h2 class="section-title"><i class="fa-solid fa-award"></i> STEM Credentials & Achievements</h2>
     <div class="credentials-grid">
-      <div class="cred-card">
+      <div class="cred-card glow-ring-gold">
         <i class="fa-solid fa-shield-halved cred-icon"></i>
         <h3>NCC National Level</h3>
         <p>Winner in National Cadets Level Championship</p>
         <span class="cred-tag"><i class="fa-solid fa-check"></i> Verified Winner</span>
       </div>
-      <div class="cred-card">
+      <div class="cred-card glow-ring-blue">
         <i class="fa-solid fa-calculator cred-icon"></i>
         <h3>IOQM Qualifier (×3)</h3>
         <p>3-Time Indian Olympiad Qualifier in Mathematics</p>
         <span class="cred-tag"><i class="fa-solid fa-check"></i> National STEM</span>
       </div>
-      <div class="cred-card">
+      <div class="cred-card glow-ring-green">
         <i class="fa-solid fa-vial cred-icon"></i>
         <h3>NSEC Qualifier (×2)</h3>
         <p>2-Time National Standard Examination in Chemistry</p>
         <span class="cred-tag"><i class="fa-solid fa-check"></i> Chemistry Honor</span>
       </div>
-      <div class="cred-card">
+      <div class="cred-card glow-ring-purple">
         <i class="fa-solid fa-brain cred-icon"></i>
         <h3>ZIO Qualifier</h3>
         <p>Zonal Informatics Olympiad (CS Logic)</p>
@@ -404,50 +443,77 @@
     </div>
   </section>
 
-  <section class="section" id="vibe">
-    <h2 class="section-title"><i class="fa-solid fa-sparkles"></i> Personalized Vibe Corner & Props</h2>
-    <div class="vibe-container">
+  <section class="section section-vibe" id="vibe">
+    <h2 class="section-title"><i class="fa-solid fa-sparkles"></i> Personalized Deck & Interactive Space</h2>
+    
+    <div class="vibe-container-aligned">
       
-      <div class="vibe-box">
-        <div class="vibe-box-header">
-          <i class="fa-solid fa-futbol pitch-icon"></i>
-          <h3>Pitch & Penalty Kick</h3>
-        </div>
-        <p>Tap the football to shoot into the top corner!</p>
-        <div class="interactive-pitch">
-          <div class="ball-wrapper">
-            <i class="fa-solid fa-futbol interactive-ball" id="kickBall"></i>
+      <div class="vibe-box pitch-vibe glow-ring-green">
+        <div class="vibe-box-content">
+          <div class="vibe-box-header">
+            <i class="fa-solid fa-futbol pitch-icon"></i>
+            <h3>Pitch & Goal Challenge</h3>
           </div>
+          <p>Tap the ball to shoot into top corner!</p>
+          <div class="interactive-pitch">
+            <div class="ball-wrapper">
+              <i class="fa-solid fa-futbol interactive-ball" id="kickBall"></i>
+            </div>
+            <div class="kick-commentary" id="kickCommentary">Ready for kickoff! Click the ball.</div>
+          </div>
+        </div>
+        <div class="vibe-box-footer">
           <div class="goal-counter">Goals Scored: <span id="goalsCount">0</span></div>
         </div>
       </div>
 
-      <div class="vibe-box">
-        <div class="vibe-box-header">
-          <i class="fa-solid fa-mug-hot tea-icon"></i>
-          <h3>Patrick Jane's Tea Corner</h3>
+      <div class="vibe-box tea-vibe glow-ring-gold">
+        <div class="vibe-box-content">
+          <div class="vibe-box-header">
+            <i class="fa-solid fa-mug-hot tea-icon"></i>
+            <h3>Patrick Jane's Tea Corner</h3>
+          </div>
+          <p>Brew fresh mentalist observations & quotes.</p>
+          <blockquote id="mentalistQuote">
+            "A cup of tea solves everything." — Patrick Jane
+          </blockquote>
         </div>
-        <p>Observe details that others miss over a cup of tea.</p>
-        <blockquote id="mentalistQuote">
-          "A cup of tea solves everything." — Patrick Jane
-        </blockquote>
-        <button id="brewQuoteBtn" class="btn tea-btn">
-          <i class="fa-solid fa-mug-saucer"></i> Brew New Observation
-        </button>
+        <div class="vibe-box-footer">
+          <button id="brewQuoteBtn" class="btn tea-btn">
+            <i class="fa-solid fa-mug-saucer"></i> Brew New Observation
+          </button>
+        </div>
       </div>
 
-      <div class="vibe-box">
-        <div class="vibe-box-header">
-          <i class="fa-solid fa-chess-knight chess-icon"></i>
-          <h3>Chess Tactical Conundrum</h3>
-        </div>
-        <p>White to move and find mate in 2!</p>
-        <div class="chess-puzzle">
-          <div class="puzzle-fen">1r3rk1/5p1p/p2p2p1/q1pP4/2P2P2/1P1B3P/PQ4P1/5RK1 w - - 0 1</div>
-          <button id="solveChessBtn" class="btn secondary-btn">Reveal Best Move</button>
-          <div id="chessSolution" class="chess-solution hidden">
-            ✨ <strong>Key Move:</strong> 1. f5! breaking open Black's kingside pawn structure!
+      <div class="vibe-box chess-vibe glow-ring-blue">
+        <div class="vibe-box-content">
+          <div class="vibe-box-header">
+            <i class="fa-solid fa-chess-knight chess-icon"></i>
+            <h3>Tactical Chess Conundrum</h3>
           </div>
+          <p class="chess-prompt"><strong>White to Move:</strong> Mate in 2 tactics!</p>
+          
+          <div class="mini-chess-board">
+            <div class="chess-row">
+              <div class="sq white">♖</div><div class="sq black">.</div><div class="sq white">.</div><div class="sq black">♔</div>
+            </div>
+            <div class="chess-row">
+              <div class="sq black">.</div><div class="sq white">♟</div><div class="sq black">♟</div><div class="sq white">♟</div>
+            </div>
+            <div class="chess-row">
+              <div class="sq white">.</div><div class="sq black">♕</div><div class="sq white">.</div><div class="sq black">.</div>
+            </div>
+            <div class="chess-row">
+              <div class="sq black">.</div><div class="sq white">.</div><div class="sq black">.</div><div class="sq white">♚</div>
+            </div>
+          </div>
+          
+          <div id="chessSolution" class="chess-solution hidden">
+            💥 <strong>1. Qf7+ Kh8  2. Qg7#</strong> (Smothered Checkmate!)
+          </div>
+        </div>
+        <div class="vibe-box-footer">
+          <button id="solveChessBtn" class="btn chess-btn">Show Solution</button>
         </div>
       </div>
 
@@ -455,7 +521,7 @@
   </section>
 
   <footer>
-    <p>Crafted by <strong>Srijit Banerjee</strong> &copy; 2026. Built with HTML, CSS, and JS.</p>
+    <p>Crafted by <strong>Srijit Banerjee</strong> &copy; 2026. Built with custom HTML, CSS, and JS.</p>
   </footer>
 
   <script src="script.js"></script>
