@@ -4,61 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Srijit Banerjee | Personal Space</title>
-  <link rel="stylesheet" href="styles.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <div class="floating-prop football-prop" id="floatingFootball" title="Click to bounce the ball!">
+    <i class="fa-solid fa-futbol"></i>
+  </div>
+  <div class="floating-prop teacup-prop" id="floatingTea" title="Patrick Jane's Tea Cup">
+    <i class="fa-solid fa-mug-hot"></i>
+    <span class="steam steam-1"></span>
+    <span class="steam steam-2"></span>
+  </div>
+
   <nav class="navbar">
-    <div class="logo">SB<span>.dev</span></div>
+    <div class="logo">Srijit Banerjee</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#interests">Vibe Corner</a></li>
+      <li><a href="#cinema">Cinema & TV</a></li>
+      <li><a href="#gaming">Gaming</a></li>
+      <li><a href="#duolingo">Duolingo</a></li>
+      <li><a href="#credentials">Certificates</a></li>
+      <li><a href="#vibe">Vibe Corner</a></li>
       <li><a href="#socials">Connect</a></li>
     </ul>
   </nav>
 
   <header class="hero" id="about">
-    <div class="hero-content">
-      <div class="avatar-badge">
-        <i class="fa-solid fa-code"></i>
+    <div class="hero-container">
+      <div class="hero-badge">
+        <i class="fa-solid fa-clapperboard"></i> Cinematic Space
       </div>
-      <h1>Hey, I'm <span class="highlight">Srijit Banerjee</span></h1>
+      <h1>Srijit Banerjee</h1>
       <p class="subtitle"><span id="typing-text"></span></p>
       <p class="bio">
-        Engineering student, competitive STEM mind, and CS enthusiast. When I'm not writing code or building hardware, you'll find me watching football, reading about math paradoxes, or rewatching <i>The Mentalist</i>.
+        Engineering student with a deep passion for computer science, mathematics, and tactical sports. STEM Olympiad qualifier, quadcopter builder, and creator of <i>Life and Conundrums</i>. When offline, I analyze football strategies or dissect complex film plots.
       </p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn primary-btn">Explore Projects</a>
-        <a href="#interests" class="btn secondary-btn">The Vibe Corner</a>
+      <div class="hero-actions">
+        <button class="btn primary-btn" id="openFutBtn">
+          <i class="fa-solid fa-id-card"></i> View FUT Manager Card
+        </button>
+        <a href="#cinema" class="btn secondary-btn">
+          <i class="fa-solid fa-film"></i> Favorite Cinema
+        </a>
       </div>
     </div>
   </header>
 
+  <div class="modal-overlay" id="futModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeFutBtn">&times;</button>
+      <div class="fut-card">
+        <div class="fut-top">
+          <div class="fut-rating">
+            <span class="num">99</span>
+            <span class="label">MGR</span>
+          </div>
+          <div class="fut-flag">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+        </div>
+        <div class="fut-image-container">
+          <i class="fa-solid fa-user-astronaut manager-avatar"></i>
+        </div>
+        <div class="fut-info">
+          <h2>SRIJIT BANERJEE</h2>
+          <p class="fut-role">CS ENGINEER & STEM TACTICIAN</p>
+        </div>
+        <div class="fut-stats">
+          <div class="stat"><span>99</span><span>TAC</span></div>
+          <div class="stat"><span>98</span><span>COD</span></div>
+          <div class="stat"><span>99</span><span>MTH</span></div>
+          <div class="stat"><span>97</span><span>PSY</span></div>
+          <div class="stat"><span>96</span><span>MOT</span></div>
+          <div class="stat"><span>98</span><span>STR</span></div>
+        </div>
+        <div class="fut-footer">
+          <span>CHEMISTRY: 100</span>
+          <span>FORMATION: 4-3-3 MATH</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section class="section" id="socials">
-    <h2 class="section-title"><i class="fa-solid fa-share-nodes"></i> Digital Footprint</h2>
+    <h2 class="section-title"><i class="fa-solid fa-compass"></i> Network & Platforms</h2>
     <div class="social-grid">
+      <a href="https://linkedin.com" target="_blank" class="social-card linkedin">
+        <i class="fa-brands fa-linkedin"></i>
+        <div class="social-info">
+          <h3>LinkedIn</h3>
+          <p>Professional Profile</p>
+        </div>
+      </a>
       <a href="https://github.com" target="_blank" class="social-card github">
         <i class="fa-brands fa-github"></i>
         <div class="social-info">
           <h3>GitHub</h3>
-          <p>Code & Repositories</p>
+          <p>Code Repositories</p>
+        </div>
+      </a>
+      <a href="https://stardance.nasa.gov" target="_blank" class="social-card stardance">
+        <i class="fa-solid fa-user-astronaut"></i>
+        <div class="social-info">
+          <h3>StarDance by NASA</h3>
+          <p>Space & Science Hub</p>
         </div>
       </a>
       <a href="https://instagram.com" target="_blank" class="social-card instagram">
         <i class="fa-brands fa-instagram"></i>
         <div class="social-info">
           <h3>Instagram</h3>
-          <p>Life & Snaps</p>
+          <p>Life & Moments</p>
         </div>
       </a>
       <a href="https://discord.com" target="_blank" class="social-card discord">
         <i class="fa-brands fa-discord"></i>
         <div class="social-info">
           <h3>Discord</h3>
-          <p>Community & Chat</p>
+          <p>Community & Tech</p>
         </div>
       </a>
       <a href="https://pinterest.com" target="_blank" class="social-card pinterest">
@@ -78,117 +148,306 @@
     </div>
   </section>
 
-  <section class="section" id="achievements">
-    <h2 class="section-title"><i class="fa-solid fa-trophy"></i> Honor Roll & STEM</h2>
-    <div class="achievement-container">
-      <div class="badge-card">
-        <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
-        <h3>NCC National Level</h3>
-        <p>Winner in National Level Cadet Competitions</p>
-      </div>
-      <div class="badge-card">
-        <div class="badge-icon"><i class="fa-solid fa-calculator"></i></div>
-        <h3>IOQM × 3</h3>
-        <p>3-Time National STEM Olympiad Qualifier</p>
-      </div>
-      <div class="badge-card">
-        <div class="badge-icon"><i class="fa-solid fa-vial"></i></div>
-        <h3>NSEC × 2</h3>
-        <p>2-Time National Standard Exam in Chemistry</p>
-      </div>
-      <div class="badge-card">
-        <div class="badge-icon"><i class="fa-solid fa-brain"></i></div>
-        <h3>ZIO Qualifier</h3>
-        <p>Zonal Informatics Olympiad</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-    <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Featured Builds</h2>
-    <div class="project-grid">
+  <section class="section" id="cinema">
+    <h2 class="section-title"><i class="fa-solid fa-film"></i> Favorite Movies (Ranked)</h2>
+    <p class="section-subtitle">Top cinematic masterworks ranked in order. Icons & covers scaled for top 3.</p>
+    
+    <div class="media-rank-grid">
       
-      <div class="project-card">
-        <div class="project-header">
-          <i class="fa-solid fa-microchip"></i>
-          <h3>Quadcopter CC3D Drone</h3>
+      <div class="media-card rank-1 top-three">
+        <div class="medal-badge medal-gold">🥇 #1</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/6188983916570644667_0" alt="The Dark Knight" />
         </div>
-        <p>Engineered and assembled a custom quadcopter flight system with precision flight controller tuning.</p>
-        <div class="tags"><span>Hardware</span><span>Robotics</span><span>CC3D</span></div>
+        <div class="media-details">
+          <h3>The Dark Knight</h3>
+          <span class="genre">Psychological Thriller / Action</span>
+        </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-header">
-          <i class="fa-solid fa-flask-vial"></i>
-          <h3>AASAI</h3>
+      <div class="media-card rank-2 top-three">
+        <div class="medal-badge medal-silver">🥈 #2</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/421779885090399242_0" alt="The Devil's Advocate" />
         </div>
-        <p>Olympiad-focused research initiative and analytical problem-solving suite.</p>
-        <div class="tags"><span>Research</span><span>STEM</span><span>Data</span></div>
+        <div class="media-details">
+          <h3>The Devil's Advocate</h3>
+          <span class="genre">Mystery / Supernatural</span>
+        </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-header">
-          <i class="fa-solid fa-book-open"></i>
-          <h3>WAL (Book Website)</h3>
+      <div class="media-card rank-3 top-three">
+        <div class="medal-badge medal-bronze">🥉 #3</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/17276164572813655187_0" alt="The Godfather II" />
         </div>
-        <p>Interactive web platform curated for literature lovers and book discovery.</p>
-        <div class="tags"><span>Web Dev</span><span>JavaScript</span><span>UI/UX</span></div>
+        <div class="media-details">
+          <h3>The Godfather Part II</h3>
+          <span class="genre">Crime / Drama Classic</span>
+        </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-header">
-          <i class="fa-solid fa-futbol"></i>
-          <h3>Sorare Fantasy Championship</h3>
+      <div class="media-card rank-4">
+        <div class="medal-badge medal-standard">#4</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/7632219868233047955_0" alt="A Beautiful Mind" />
         </div>
-        <p>Fantasy league strategy engine built around global football telemetry and statistics.</p>
-        <div class="tags"><span>Sports Analytics</span><span>Web3</span><span>Stats</span></div>
+        <div class="media-details">
+          <h3>A Beautiful Mind</h3>
+          <span class="genre">Biographical Drama / Math</span>
+        </div>
       </div>
 
-      <div class="project-card" id="blog">
-        <div class="project-header">
-          <i class="fa-solid fa-infinity"></i>
-          <h3>Life and Conundrums</h3>
+      <div class="media-card rank-5">
+        <div class="medal-badge medal-standard">#5</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/5903288414437667929_0" alt="Inception" />
         </div>
-        <p>Personal mathematical blog tackling classic paradoxes, logical dilemmas, and counter-intuitive math proofs.</p>
-        <div class="tags"><span>Blog</span><span>Mathematics</span><span>Paradoxes</span></div>
+        <div class="media-details">
+          <h3>Inception</h3>
+          <span class="genre">Sci-Fi / Mind-Bender</span>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <section class="section" id="interests">
-    <h2 class="section-title"><i class="fa-solid fa-icons"></i> Personal Vibe & Props</h2>
-    <div class="vibe-grid">
-
-      <div class="vibe-card football-card">
-        <div class="vibe-header">
-          <i class="fa-solid fa-futbol pitch-icon"></i>
-          <h3>Pitch & Court</h3>
+  <section class="section">
+    <h2 class="section-title"><i class="fa-solid fa-tv"></i> Favorite Web Series (Ranked in Order)</h2>
+    <p class="section-subtitle">Top television masterpieces ordered by personal obsession.</p>
+    
+    <div class="media-rank-grid">
+      
+      <div class="media-card rank-1 top-three">
+        <div class="medal-badge medal-gold">🥇 #1</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/16429863304335395595_0" alt="The Mentalist" />
         </div>
-        <p>Huge football enthusiast (with a side of badminton). Love tactics, match analysis, and high-tempo games.</p>
-        <div class="interactive-pitch">
-          <p>Tap the ball to score a kick!</p>
-          <div class="ball-wrapper" id="ballWrapper">
-            <i class="fa-solid fa-futbol ball" id="football"></i>
-          </div>
-          <span class="score-board">Goals Scored: <strong id="goalCount">0</strong></span>
+        <div class="media-details">
+          <h3>The Mentalist</h3>
+          <span class="genre">Patrick Jane / Crime Mystery</span>
         </div>
       </div>
 
-      <div class="vibe-card mentalist-card">
-        <div class="vibe-header">
-          <i class="fa-solid fa-mug-hot tea-icon"></i>
-          <h3>Patrick Jane Corner</h3>
+      <div class="media-card rank-2 top-three">
+        <div class="medal-badge medal-silver">🥈 #2</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/87392571780567239_0" alt="Peaky Blinders" />
         </div>
-        <p>Favorite Series: <i>The Mentalist</i>. A sip of tea, sharp observation, and solving complex puzzles.</p>
-        
-        <div class="tea-widget">
-          <blockquote id="mentalistQuote">
-            "A cup of tea solves everything." — Patrick Jane
-          </blockquote>
-          <button id="quoteBtn" class="btn tea-btn">
-            <i class="fa-solid fa-mug-saucer"></i> Brew New Observation
-          </button>
+        <div class="media-details">
+          <h3>Peaky Blinders</h3>
+          <span class="genre">Historical Crime / Strategy</span>
+        </div>
+      </div>
+
+      <div class="media-card rank-3 top-three">
+        <div class="medal-badge medal-bronze">🥉 #3</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/1793092578874478953_0" alt="Suits" />
+        </div>
+        <div class="media-details">
+          <h3>Suits</h3>
+          <span class="genre">Legal Drama / High Intellect</span>
+        </div>
+      </div>
+
+      <div class="media-card rank-4">
+        <div class="medal-badge medal-standard">#4</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/11546586552630907784_0" alt="Dexter" />
+        </div>
+        <div class="media-details">
+          <h3>Dexter</h3>
+          <span class="genre">Psychological Crime Thriller</span>
+        </div>
+      </div>
+
+      <div class="media-card rank-5">
+        <div class="medal-badge medal-standard">#5</div>
+        <div class="media-cover">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/16663548961573866863_0" alt="Better Call Saul" />
+        </div>
+        <div class="media-details">
+          <h3>Better Call Saul</h3>
+          <span class="genre">Legal Drama / Masterpiece</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="gaming">
+    <h2 class="section-title"><i class="fa-solid fa-gamepad"></i> Gaming Arena</h2>
+    <p class="section-subtitle">Tactical simulation, sports engineering, and strategy games I play.</p>
+    
+    <div class="games-grid">
+      <div class="game-card">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/18268862237961339587_0" alt="EA FC" />
+        <div class="game-overlay">
+          <h3>EA Sports FC</h3>
+          <p>Ultimate Football Tactics</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/4719857506306299421_0" alt="eFootball" />
+        <div class="game-overlay">
+          <h3>eFootball</h3>
+          <p>Simulation & Precision Pitching</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/16901180951334608498_0" alt="Among Us" />
+        <div class="game-overlay">
+          <h3>Among Us</h3>
+          <p>Social Deduction & Logic</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/2087161734483443347_0" alt="Chess.com" />
+        <div class="game-overlay">
+          <h3>Chess.com</h3>
+          <p>Blitz & Positional Strategy</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/4574039669113563101_0" alt="GTA V" />
+        <div class="game-overlay">
+          <h3>GTA V</h3>
+          <p>Open World Exploration</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="duolingo">
+    <div class="duolingo-container">
+      <div class="duolingo-header">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/16898440191420160225_0" alt="Duolingo Owl" class="duo-owl" />
+        <div>
+          <h2>Duolingo Language Vault</h2>
+          <p>Polyglot journey in progress! Tracking streak & language fluency.</p>
+        </div>
+      </div>
+
+      <div class="duo-stats-grid">
+        <div class="duo-stat-card">
+          <i class="fa-solid fa-fire duo-icon"></i>
+          <div>
+            <h3>520+ Days</h3>
+            <p>Active Streak</p>
+          </div>
+        </div>
+        <div class="duo-stat-card">
+          <i class="fa-solid fa-bolt duo-icon"></i>
+          <div>
+            <h3>45,000+ XP</h3>
+            <p>Total Experience</p>
+          </div>
+        </div>
+        <div class="duo-stat-card">
+          <i class="fa-solid fa-crown duo-icon"></i>
+          <div>
+            <h3>Diamond League</h3>
+            <p>Top Tier Competitor</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="language-bars">
+        <div class="lang-item">
+          <div class="lang-label"><span>🇪🇸 Spanish</span><strong>Advanced (B2)</strong></div>
+          <div class="progress-bg"><div class="progress-fill" style="width: 85%;"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-label"><span>🇫🇷 French</span><strong>Intermediate (B1)</strong></div>
+          <div class="progress-bg"><div class="progress-fill" style="width: 65%;"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-label"><span>🇩🇪 German</span><strong>Elementary (A2)</strong></div>
+          <div class="progress-bg"><div class="progress-fill" style="width: 45%;"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-label"><span>🇯🇵 Japanese</span><strong>Basics (A1)</strong></div>
+          <div class="progress-bg"><div class="progress-fill" style="width: 30%;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="credentials">
+    <h2 class="section-title"><i class="fa-solid fa-award"></i> STEM Credentials & Achievements</h2>
+    <div class="credentials-grid">
+      <div class="cred-card">
+        <i class="fa-solid fa-shield-halved cred-icon"></i>
+        <h3>NCC National Level</h3>
+        <p>Winner in National Cadets Level Championship</p>
+        <span class="cred-tag"><i class="fa-solid fa-check"></i> Verified Winner</span>
+      </div>
+      <div class="cred-card">
+        <i class="fa-solid fa-calculator cred-icon"></i>
+        <h3>IOQM Qualifier (×3)</h3>
+        <p>3-Time Indian Olympiad Qualifier in Mathematics</p>
+        <span class="cred-tag"><i class="fa-solid fa-check"></i> National STEM</span>
+      </div>
+      <div class="cred-card">
+        <i class="fa-solid fa-vial cred-icon"></i>
+        <h3>NSEC Qualifier (×2)</h3>
+        <p>2-Time National Standard Examination in Chemistry</p>
+        <span class="cred-tag"><i class="fa-solid fa-check"></i> Chemistry Honor</span>
+      </div>
+      <div class="cred-card">
+        <i class="fa-solid fa-brain cred-icon"></i>
+        <h3>ZIO Qualifier</h3>
+        <p>Zonal Informatics Olympiad (CS Logic)</p>
+        <span class="cred-tag"><i class="fa-solid fa-check"></i> CS Olympiad</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="vibe">
+    <h2 class="section-title"><i class="fa-solid fa-sparkles"></i> Personalized Vibe Corner & Props</h2>
+    <div class="vibe-container">
+      
+      <div class="vibe-box">
+        <div class="vibe-box-header">
+          <i class="fa-solid fa-futbol pitch-icon"></i>
+          <h3>Pitch & Penalty Kick</h3>
+        </div>
+        <p>Tap the football to shoot into the top corner!</p>
+        <div class="interactive-pitch">
+          <div class="ball-wrapper">
+            <i class="fa-solid fa-futbol interactive-ball" id="kickBall"></i>
+          </div>
+          <div class="goal-counter">Goals Scored: <span id="goalsCount">0</span></div>
+        </div>
+      </div>
+
+      <div class="vibe-box">
+        <div class="vibe-box-header">
+          <i class="fa-solid fa-mug-hot tea-icon"></i>
+          <h3>Patrick Jane's Tea Corner</h3>
+        </div>
+        <p>Observe details that others miss over a cup of tea.</p>
+        <blockquote id="mentalistQuote">
+          "A cup of tea solves everything." — Patrick Jane
+        </blockquote>
+        <button id="brewQuoteBtn" class="btn tea-btn">
+          <i class="fa-solid fa-mug-saucer"></i> Brew New Observation
+        </button>
+      </div>
+
+      <div class="vibe-box">
+        <div class="vibe-box-header">
+          <i class="fa-solid fa-chess-knight chess-icon"></i>
+          <h3>Chess Tactical Conundrum</h3>
+        </div>
+        <p>White to move and find mate in 2!</p>
+        <div class="chess-puzzle">
+          <div class="puzzle-fen">1r3rk1/5p1p/p2p2p1/q1pP4/2P2P2/1P1B3P/PQ4P1/5RK1 w - - 0 1</div>
+          <button id="solveChessBtn" class="btn secondary-btn">Reveal Best Move</button>
+          <div id="chessSolution" class="chess-solution hidden">
+            ✨ <strong>Key Move:</strong> 1. f5! breaking open Black's kingside pawn structure!
+          </div>
         </div>
       </div>
 
@@ -196,7 +455,7 @@
   </section>
 
   <footer>
-    <p>Crafted by <strong>Srijit Banerjee</strong> &copy; 2026. Built with HTML, CSS & JS.</p>
+    <p>Crafted by <strong>Srijit Banerjee</strong> &copy; 2026. Built with HTML, CSS, and JS.</p>
   </footer>
 
   <script src="script.js"></script>

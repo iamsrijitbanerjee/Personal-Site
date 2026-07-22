@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // --- Dynamic Typing Effect for Hero Subtitle ---
+  // --- Dynamic Typing Effect in Hero ---
   const typingElement = document.getElementById("typing-text");
   const phrases = [
-    "Computer Science Enthusiast 💻",
+    "Computer Science Engineer 💻",
     "STEM Olympiad Winner 🏆",
-    "Football & Badminton Tactics Buff ⚽",
-    "Mentalist & Paradox Fanatic ☕"
+    "Tactical Football & Badminton Buff ⚽",
+    "The Mentalist & Logic Enthusiast ☕"
   ];
 
   let phraseIndex = 0;
@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
       charIndex++;
     }
 
-    let typeSpeed = isDeleting ? 40 : 80;
+    let typeSpeed = isDeleting ? 30 : 70;
 
     if (!isDeleting && charIndex === currentPhrase.length) {
-      typeSpeed = 2000; // Pause at end of sentence
+      typeSpeed = 1800;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      typeSpeed = 500;
+      typeSpeed = 400;
     }
 
     setTimeout(typeEffect, typeSpeed);
@@ -40,23 +40,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeEffect();
 
-  // --- Football Score Counter Props ---
-  const football = document.getElementById("football");
-  const goalCountDisplay = document.getElementById("goalCount");
-  let goals = 0;
+  // --- FUT Manager Card Modal Control ---
+  const futModal = document.getElementById("futModal");
+  const openFutBtn = document.getElementById("openFutBtn");
+  const closeFutBtn = document.getElementById("closeFutBtn");
 
-  football.addEventListener("click", () => {
-    goals++;
-    goalCountDisplay.textContent = goals;
+  openFutBtn.addEventListener("click", () => {
+    futModal.classList.add("active");
+  });
 
-    // Trigger Kick Animation
-    football.style.transform = "translateY(-20px) rotate(360deg)";
+  closeFutBtn.addEventListener("click", () => {
+    futModal.classList.remove("active");
+  });
+
+  futModal.addEventListener("click", (e) => {
+    if (e.target === futModal) {
+      futModal.classList.remove("active");
+    }
+  });
+
+  // --- Football Goal Counter Interactive Game ---
+  const kickBall = document.getElementById("kickBall");
+  const goalsCount = document.getElementById("goalsCount");
+  let score = 0;
+
+  kickBall.addEventListener("click", () => {
+    score++;
+    goalsCount.textContent = score;
+
+    kickBall.style.transform = "translateY(-25px) rotate(360deg)";
     setTimeout(() => {
-      football.style.transform = "translateY(0) rotate(0deg)";
+      kickBall.style.transform = "translateY(0) rotate(0deg)";
     }, 250);
   });
 
-  // --- Mentalist / Patrick Jane Quote Generator ---
+  // --- Patrick Jane Quote Generator ---
   const mentalistQuotes = [
     '"A cup of tea solves everything." — Patrick Jane',
     '"There’s no such thing as magic. Just attention to detail."',
@@ -67,9 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const quoteDisplay = document.getElementById("mentalistQuote");
-  const quoteBtn = document.getElementById("quoteBtn");
+  const brewQuoteBtn = document.getElementById("brewQuoteBtn");
 
-  quoteBtn.addEventListener("click", () => {
+  brewQuoteBtn.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * mentalistQuotes.length);
     quoteDisplay.style.opacity = "0";
 
@@ -77,6 +95,25 @@ document.addEventListener("DOMContentLoaded", () => {
       quoteDisplay.textContent = mentalistQuotes[randomIndex];
       quoteDisplay.style.opacity = "1";
     }, 200);
+  });
+
+  // --- Chess Puzzle Solution Toggle ---
+  const solveChessBtn = document.getElementById("solveChessBtn");
+  const chessSolution = document.getElementById("chessSolution");
+
+  solveChessBtn.addEventListener("click", () => {
+    chessSolution.classList.toggle("hidden");
+    solveChessBtn.textContent = chessSolution.classList.contains("hidden") 
+      ? "Reveal Best Move" 
+      : "Hide Move";
+  });
+
+  // --- Corner Floating Props Click Animation ---
+  const floatingFootball = document.getElementById("floatingFootball");
+  floatingFootball.addEventListener("click", () => {
+    score++;
+    goalsCount.textContent = score;
+    alert("⚽ Penalty goal scored from the corner prop! Total Goals: " + score);
   });
 
 });
